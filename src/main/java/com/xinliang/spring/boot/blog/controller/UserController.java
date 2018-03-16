@@ -80,7 +80,7 @@ public class UserController {
 	 * @return
 	 */
 	@GetMapping("/delete/{id}")
-	public ModelAndView delete(@PathVariable Long id) {
+	public ModelAndView delete(@PathVariable("id") Long id) {
 		userRepository.deleteUser(id);
 		return new ModelAndView("redirect:/users");
 	}
